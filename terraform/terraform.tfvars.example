@@ -1,2 +1,3 @@
 # copy to terraform.tfvars (gitignored) and fill in
 proxmox_api_token = "user@domain!api-token=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+proxmox_endpoint = "https://my.pve.com:8006"
