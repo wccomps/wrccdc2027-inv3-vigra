@@ -1,0 +1,9 @@
+chain netmap_dstnat {
+	type nat hook prerouting priority dstnat - 1; policy accept;
+	iifname "eth0" ip daddr 10.100.203.0/24 ip daddr != 10.100.203.2 dnat ip prefix to ip daddr map { 10.100.203.0/24 : 192.168.220.0/24 }
+}
+
+chain netmap_srcnat {
+	type nat hook postrouting priority srcnat - 1; policy accept;
+	oifname "eth0" ip saddr 192.168.220.0/24 ip saddr != 192.168.220.2 snat ip prefix to ip saddr map { 192.168.220.0/24 : 10.100.203.0/24 }
+}

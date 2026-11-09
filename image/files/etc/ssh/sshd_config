@@ -1,0 +1,6 @@
+PermitRootLogin yes
+PasswordAuthentication yes
+KbdInteractiveAuthentication no
+TrustedUserCAKeys /etc/ssh/vault-ca.pub
+AuthorizedPrincipalsFile /etc/ssh/auth_principals/%u
+Subsystem sftp /usr/lib/sftp-server

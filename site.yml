@@ -1,5 +1,0 @@
----
-- name: Provision vigra
-  hosts: vigra
-
-  roles: []
