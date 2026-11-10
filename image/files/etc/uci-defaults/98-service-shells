@@ -1,9 +1,0 @@
-#!/bin/sh
-# RANGE TARGET (CVE-2026-123158 "SSHole"): give the locked service accounts a
-# real shell so logging into them via the openssh password-bypass yields an
-# interactive foothold instead of /bin/false. Daemons setuid() and never exec
-# the login shell, so this does not affect the running services.
-for u in daemon ftp network nobody ntp dnsmasq logd sshd ubus; do
-	sed -i "s|^\($u:.*\):/bin/false\$|\1:/bin/ash|" /etc/passwd
-done
-exit 0

@@ -22,7 +22,7 @@ ROOT_PASSWORD ?= SMBlyRequired!
 # patched 10.6_p2, so the vulnerable .apks are vendored in pkgs/ and installed
 # as local packages. Bump these to 10.6_p2-r1 (or drop the pin) to patch.
 PACKAGES := openssh-server=10.6_p1-r2 openssh-sftp-server=10.6_p1-r2 \
-            qemu-ga luci -dropbear -odhcpd-ipv6only
+            qemu-ga luci -dropbear -odhcpd-ipv6only shadow-chage
 
 IMAGE := build/openwrt-vigra.raw
 
