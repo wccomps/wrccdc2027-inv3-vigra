@@ -1,6 +1,6 @@
 config dnsmasq
 	option noresolv '1'
-	list server '192.168.220.79'
+	list server '192.168.220.10'
 	option domainneeded '0'
 	option boguspriv '0'
 	option rebind_protection '0'
